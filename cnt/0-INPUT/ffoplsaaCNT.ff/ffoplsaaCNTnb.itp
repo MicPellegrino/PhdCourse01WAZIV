@@ -1,0 +1,28 @@
+[ atomtypes ]
+; page 98 GROMACS manual
+; name  mass      charge         ptype   V(sigma)       W(epsilon) if the combination rule is: "1"
+; From J. Phys. Chem. B 2001, 105, 9980-9987
+C1   12.01100  0.00000          A       3.55000e-01    2.92288e-01
+C2   12.01100  0.00000          A       3.55000e-01    2.92288e-01
+C3   12.01100  0.00000          A       3.55000e-01    2.92288e-01
+
+[ nonbond_params ] ; VdW
+; i j funct  V(sigma)       W(epsilon)
+C1 C2 1      3.55000e-01    2.92288e-01
+C1 C1 1      3.55000e-01    2.92288e-01
+C1 C3 1      3.55000e-01    2.92288e-01
+C2 C2 1      3.55000e-01    2.92288e-01
+C2 C3 1      3.55000e-01    2.92288e-01
+C3 C3 1      3.55000e-01    2.92288e-01
+
+[ pairtypes ] ; 1-4 extra interactions
+; i j funct  V(sigma)       W(epsilon)
+C1 C2 1      3.55000e-01    0.0000
+C1 C1 1      3.55000e-01    0.0000
+C1 C3 1      3.55000e-01    0.0000
+C2 C2 1      3.55000e-01    0.0000
+C2 C3 1      3.55000e-01    0.0000
+C3 C3 1      3.55000e-01    0.0000
+
+
+

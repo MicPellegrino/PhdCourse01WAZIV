@@ -1,0 +1,17 @@
+; Run control
+integrator          =  steep      
+nsteps              =  100
+; EM criteria
+emtol               =  1000.
+emstep              =  0.001
+
+constraints         =  none
+nstlist             =  10         ; Frequency to update the neighbor list. 0 means that the list is made only once. 
+                                  ; For Energy minimization, updates are performed every energy evaluation.
+ns_type             =  grid
+rlist               =  1          ; Cut-off distance for short-range neighbor list 
+rcoulomb            =  1
+rvdw                =  1
+periodic_molecules  =  yes
+pbc 		    =  xyz
+cutoff-scheme       = verlet

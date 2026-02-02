@@ -1,0 +1,3 @@
+*************************************************************
+Here you can find three MATLAB utilities that can help you in 1) creating the index (*.ndx) file (makeindex.m); 2) defining the atom-groups to be used in the *.mdp file (makenosehoover.m); 3) plot the temperature profile and calculate thermal conductivity (MAIN.m)
+**************************************************************
