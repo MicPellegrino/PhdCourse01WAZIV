@@ -10,7 +10,7 @@
 
 ## Simulated systems
 
-### Carbon nanotube (`cnt`)
+### Heat transfer in a carbon nanotube (`cnt`)
 
 ...
 
