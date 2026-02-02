@@ -1,0 +1,14 @@
+# Please change this name to match the tutorial project name, e.g. umbrella-sampling
+name: inmod-md
+channels:
+        - conda-forge
+dependencies:
+        - gromacs=2025.4=nompi*
+        - matplotlib
+        - ipykernel
+        - notebook=6.5.5
+        - nglview
+        - numpy
+        - pandas
+        - scikit-image
+        - circle-fit
