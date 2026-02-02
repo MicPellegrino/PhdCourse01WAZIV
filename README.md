@@ -86,6 +86,7 @@ Authors:
 
 
 #### TODO
+- Add an actual license;
 - Add more instructions on Conda setup;
 - Add the MATLAB scripts back to the zeolite postprocessing folder (for the students who want to use MATLAB instead of Python);
-- Add figures notebooks (NB not embedded!);
+- Add figures notebooks (NB not embedded!).
