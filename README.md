@@ -12,19 +12,19 @@
 
 ### Heat transfer in a carbon nanotube (`cnt`)
 
-...
+This first exercise will introduce you to the basics of Molecular Dynamics (creating configuration files, algorithms, force fields, topologies thermalization and post-processing). The final goal will be to evaluate the thermal conductivity of a carbon nanotube using a non-equilibrium method. Zero to hero.
 
 ### Water adsorption in zeolite (`zeolite`)
 
-...
+The second exercise will introduce liquid environments (solvation) and water models. You will be asked to simulate a zeolite matrix at different hydration levels in order to study its energy storage properties. You will also compute the self-diffusion coefficient of water, a typical observable obtainable from Molecular Dynamics.
 
 ### Liquid-liquid interfaces (`biphase`)
 
-...
+The third exercise moves toward multicomponent liquid systems and introduces pressure control (barostat). You will simulate the formation of the interface between water and hexane and compute its surface tension. In the final part, pentanol will be added to the mixture, and you will assess how it affects the surface properties.
 
 ### Wetting of flat and rough surfaces (`wetting`)
 
-...
+In the fourth exercise, you will simulate a water droplet spreading on an “aluminum” crystal. You will compute its contact angle and study how it changes as the strenght of liquid–solid interactions is increased. Finally, you will explore how wetting states are affected by the presence of surface nanostructures.
 
 ## How to create and test the virtual environment
 
@@ -34,7 +34,7 @@
 - Mamba: https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html;
 - Micromamba: https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html.
 
-I will refer to Conda from now on, but mind that any variant should work just fine. In my personal experience, Mamba and Micromamba are significantly faster in terms of environment creation. If you already have Conda installed, don't bother switching. The installation pages should contain instructions on how to setup and activate Conda after its installation (you may need/want to add some lines to `.bashrc` and/or `.profile`).
+I will refer to Conda from now on, but mind that any variant should work just fine. In my personal experience, Mamba and Micromamba are significantly faster when it comes to of environment creation and management. However, don't bother switching if you already have Conda installed. The installation pages should contain instructions on how to setup and activate Conda after its installation (you may need/want to add some lines to `.bashrc` and/or `.profile`).
 
 **Step 2 - Create the virtual environment** by running:
 
@@ -60,7 +60,7 @@ With the exception of `cnt`, move to the any of the folders (e.g. `cd biphase`) 
 
 	jupyter-notebook <name-of-the-notebook>.ipynb
 
-You can now run the notebook cell-by-cell. You may have to edit some simulation configuration file; in this case open the file from `bash` (i.e. _outside the notebook_) using your favourite text editor (`vim`, `code`, `emacs`, `featherpad`, ...).
+You can now run the notebook cell-by-cell. You may have to edit some simulation configuration file; in this case open the file from `bash` (i.e. _outside the notebook_) using your favourite text editor (`vim`, `code`, `emacs`, `gedit`, `featherpad`, ...).
 
 Sorry ladies and gentlemen, the notebook itself is the best, and only, GUI you’re going to get :-)
 
@@ -76,12 +76,16 @@ In terms of "Gromacs friendliness", **VMD** is definitely the best.
 
 ## License
 
-...
+Provided by the Multi-Scale Modeling Lab of Politecnico di Torino (Italy). These resources are intended for pedagogical purposes, and were designed for the undergraduate and third-cycle courses at Politecnico di Torino (2023-2026).
+
+Authors:
+- Matteo Fasano (matteo.fasano@polito.it)
+- Michele Pellegrino (michele.pellegrino@polito.it)
+
+
 
 
 #### TODO
-- Add description of exercises
 - Add more instructions on Conda setup;
 - Add the MATLAB scripts back to the zeolite postprocessing folder (for the students who want to use MATLAB instead of Python);
 - Add figures notebooks (NB not embedded!);
-- Add license
