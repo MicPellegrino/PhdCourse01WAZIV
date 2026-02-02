@@ -2,13 +2,13 @@
 
 ## Content
 
-- [Systems](#systems)
+- [Simulated systems](#simulated-systems)
 - [How to create and test the virtual environment](#how-to-create-and-test-the-virtual-environment)
 - [How to run exercise notebooks](#how-to-run-exercise-notebooks)
-- [How to visualize results](#how-to-visualize-results)
+- [How to visualize the results](#how-to-visualize-the-results)
 - [License](#license)
 
-## Systems
+## Simulated systems
 
 ### Carbon nanotube (`cnt`)
 
@@ -64,7 +64,7 @@ You can now run the notebook cell-by-cell. You may have to edit some simulation 
 
 Sorry ladies and gentlemen, the notebook itself is the best, and only, GUI you’re going to get :-)
 
-## How to visualize results
+## How to visualize the results
 
 In the notebooks, you will find `nglview` widgets allowing inline visualization of molecular simulation results. There are better solutions _outside the notebook_:
 - VMD: https://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD - free of charge, you just need to register you email;
