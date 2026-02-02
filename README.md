@@ -2,6 +2,14 @@
 
 ## Content
 
+- [Systems](#systems)
+- [How to create and test the virtual environment](#how-to-create-and-test-the-virtual-environment)
+- [How to run exercise notebooks](#how-to-run-exercise-notebooks)
+- [How to visualize results](#how-to-visualize-results)
+- [License](#license)
+
+## Systems
+
 ### Carbon nanotube (`cnt`)
 
 ...
@@ -66,6 +74,9 @@ In the notebooks, you will find `nglview` widgets allowing inline visualization 
 
 In terms of "Gromacs friendliness", VMD is definitely the best.
 
+## License
+
+...
 
 
 #### TODO
@@ -73,4 +84,4 @@ In terms of "Gromacs friendliness", VMD is definitely the best.
 - Add more instructions on Conda setup;
 - Add the MATLAB scripts back to the zeolite postprocessing folder (for the students who want to use MATLAB instead of Python);
 - Add figures notebooks (NB not embedded!);
-- ...
+- Add license
