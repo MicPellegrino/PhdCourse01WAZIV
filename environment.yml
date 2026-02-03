@@ -1,4 +1,3 @@
-# Please change this name to match the tutorial project name, e.g. umbrella-sampling
 name: inmod-md
 channels:
         - conda-forge
