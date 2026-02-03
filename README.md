@@ -88,6 +88,7 @@ Authors:
 
 
 #### TODO
+- Finish commenting wetting notebook;
 - Add an actual license;
 - Add more instructions on Conda setup;
 - Add the MATLAB scripts back to the zeolite postprocessing folder (for the students who want to use MATLAB instead of Python);
