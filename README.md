@@ -28,21 +28,37 @@ In the fourth exercise, you will simulate a water droplet spreading on an “alu
 
 ## How to create and test the virtual environment
 
+**Step :zero: - Get a Linux distribution**:
+
+- If you are a **Linux** user, then you are already good to go;
+- If you are a **Windows** user, setup the Windows Subsystem for Linux: https://learn.microsoft.com/en-us/windows/wsl/install (recommended), or use a virtual machine (discouraged).
+- If you are a **Mac** user, the environment and the notebooks have been also tested on the latest MacOS with m2 and m4 architecture. So you should also be good to go.
+
 **Step :one: - Download and install Conda or one of its variants**:
 - Conda: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html;
 - Miniconda: https://www.anaconda.com/docs/getting-started/miniconda/install;
 - Mamba: https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html;
 - Micromamba: https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html.
 
-I will refer to Conda from now on, but mind that any variant should work just fine. In my personal experience, Mamba and Micromamba are significantly faster when it comes to of environment creation and management. However, don't bother switching if you already have Conda installed. 
+Example installation of Miniconda (tested on `wsl`):
 
-:warning: The installation pages should contain instructions on how to setup and activate Conda after its installation. You may want (or need) to add some lines to `.bashrc` and/or `.profile` in order to automatically activate Conda when opening a new `bash` session.
+	wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+	./Miniconda3-latest-Linux-x86_64.sh
+	# Follow the instructions
+
+I will refer to Conda from now on, but mind that any variant should work just fine. In my personal experience, Mamba and Micromamba are significantly faster when it comes to environment creation and management. Micromamba should be the most lightweight. However, don't bother switching if you already have Conda installed. 
+
+:warning: The installation instructions should mention how to setup and activate Conda after its installation. You may want (or need) to add some lines to `.bashrc` and/or `.profile` in order to automatically activate Conda when opening a new `bash` session.
 
 **Step :two: - Create the virtual environment** by running:
 
 	conda env create -f environment.yml --channel-priority strict
 
-the `--channel-priority strict` may be necessary to force `conda` to install the required version of Jupyter Notebook.
+the `--channel-priority strict` may be necessary to force `conda` to install the required version of Jupyter Notebook. If the `--channel-priority strict` flag doesn't work, try:
+
+	conda config --set channel_priority strict
+
+instead.
 
 **Step :three: - Test Gromacs installation**. Activate the virtual environment by running:
 
