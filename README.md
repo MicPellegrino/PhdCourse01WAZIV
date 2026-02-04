@@ -78,9 +78,15 @@ With the exception of `cnt`, move to the any of the folders (e.g. `cd biphase`) 
 
 	jupyter-notebook <name-of-the-notebook>.ipynb
 
-You can now run the notebook cell-by-cell. You may have to edit some simulation configuration file; in this case open the file from `bash` (i.e. _outside the notebook_) using your favourite text editor (`vim`, `code`, `emacs`, `gedit`, `featherpad`, ...).
+You can now run the notebook cell-by-cell. You may have to edit some simulation configuration file; in this case, open Jupyter Notebook in the folder, by just running:
 
-Sorry ladies and gentlemen, the notebook itself is the best, and only, GUI you’re going to get :man_shrugging:
+	jupyter-notebook
+
+and navigate to the file you want to edit.
+
+Alternatively, you can open the file from `bash` (i.e. _outside the notebook_) using your favourite text editor (`vim`, `code`, `emacs`, `gedit`, `featherpad`, ...).
+
+Sorry ladies and gentlemen, the notebook itself is the best, and only, GUI you’re going to get. :man_shrugging:
 
 ## How to visualize the results
 
