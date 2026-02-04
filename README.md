@@ -87,9 +87,10 @@ Authors:
 
 
 
-#### TODO
-- Finish commenting wetting notebook;
-- Add an actual license;
+#### TODO (in order of importance)
 - Add more instructions on Conda setup;
+- Port the cnt exercise to Jupyter-Notebook;
+- Finish commenting wetting notebook;
 - Add the MATLAB scripts back to the zeolite postprocessing folder (for the students who want to use MATLAB instead of Python);
-- Add figures notebooks (NB not embedded!).
+- Add figures notebooks (NB not embedded!);
+- Add an actual license.
