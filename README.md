@@ -96,7 +96,7 @@ In the notebooks, you will find `nglview` widgets allowing inline visualization 
 - VEGA ZZ: https://www.ddl.unimi.it/cms/index.php?Software_projects:VEGA_ZZ:Download - an activation key must be purchased;
 - PyMOL: https://www.pymol.org/ - an activation key must be purchased.
 
-:film_projector: In terms of "Gromacs friendliness", **VMD** is definitely the best.
+:film_projector: In terms of "Gromacs friendliness", **VMD** is definitely the best. I really suggest you install VMD.
 
 ## License
 
