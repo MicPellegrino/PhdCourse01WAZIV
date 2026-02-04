@@ -52,19 +52,22 @@ I will refer to Conda from now on, but mind that any variant should work just fi
 
 **Step :two: - Create the virtual environment** by running:
 
+	conda env create -f environment.yml
+
+it may be necessary to add a `--channel-priority strict` flag to force `conda` to install the required version of Jupyter Notebook. 
+
 	conda env create -f environment.yml --channel-priority strict
 
-the `--channel-priority strict` may be necessary to force `conda` to install the required version of Jupyter Notebook. If the `--channel-priority strict` flag doesn't work, try:
+If it gives you an error, try this instead:
 
 	conda config --set channel_priority strict
-
-instead.
+	conda env create -f environment.yml
 
 **Step :three: - Test Gromacs installation**. Activate the virtual environment by running:
 
 	conda activate inmod-md
 
-and run: 
+and then run: 
 
 	gmx help mdrun
  
@@ -74,7 +77,7 @@ from the command line. The first line should be: `:-) GROMACS - gmx help, 2025.4
 
 ## How to run exercise notebooks
 
-With the exception of `cnt`, move to the any of the folders (e.g. `cd biphase`) and open the related notebook by running:
+Move to the any of the folders (e.g. `cd biphase`) and open the related notebook by running:
 
 	jupyter-notebook <name-of-the-notebook>.ipynb
 
@@ -82,11 +85,9 @@ You can now run the notebook cell-by-cell. You may have to edit some simulation 
 
 	jupyter-notebook
 
-and navigate to the file you want to edit.
+and navigate to the file you want to edit. Sorry ladies and gentlemen, the notebook itself is the best, and only, GUI you’re going to get. :man_shrugging:
 
-Alternatively, you can open the file from `bash` (i.e. _outside the notebook_) using your favourite text editor (`vim`, `code`, `emacs`, `gedit`, `featherpad`, ...).
-
-Sorry ladies and gentlemen, the notebook itself is the best, and only, GUI you’re going to get. :man_shrugging:
+Alternatively, you can open the file from `bash` (i.e. _outside the notebook_) using your favourite text editor, like `vim`, `code`, `emacs`, `gedit` or `featherpad`. They are all equal, but `vim` is more equal than the others.
 
 ## How to visualize the results
 
@@ -96,7 +97,7 @@ In the notebooks, you will find `nglview` widgets allowing inline visualization 
 - VEGA ZZ: https://www.ddl.unimi.it/cms/index.php?Software_projects:VEGA_ZZ:Download - an activation key must be purchased;
 - PyMOL: https://www.pymol.org/ - an activation key must be purchased.
 
-:film_projector: In terms of "Gromacs friendliness", **VMD** is definitely the best. I really suggest you install VMD.
+In terms of "Gromacs friendliness", **VMD** is definitely the best. I really suggest you install VMD :film_projector:
 
 ## License
 
