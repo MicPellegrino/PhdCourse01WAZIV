@@ -91,6 +91,7 @@ Authors:
 - Add more instructions on Conda setup;
 - Port the cnt exercise to Jupyter-Notebook;
 - Finish commenting wetting notebook;
+- Test xmgrace and gnuplot on wsl (local);
 - Add the MATLAB scripts back to the zeolite postprocessing folder (for the students who want to use MATLAB instead of Python);
 - Add figures notebooks (NB not embedded!);
 - Add an actual license.
