@@ -8,6 +8,7 @@ dependencies:
  - notebook=6.5.5
  - nglview
  - mdanalysis
+ - mdanalysisdata
  - numpy
  - pandas
  - scikit-image
