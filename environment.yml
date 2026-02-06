@@ -7,7 +7,7 @@ dependencies:
  - ipykernel
  - notebook=6.5.5
  - nglview
- - pytraj
+ - mdanalysis
  - numpy
  - pandas
  - scikit-image
