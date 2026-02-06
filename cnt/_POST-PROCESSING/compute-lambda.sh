@@ -13,7 +13,7 @@ tmp=`mktemp -d`
 grep -v '\#' $file | grep -v '\@' | awk '!($1="")' > $tmp/clean.dat 
 
 # compute the mean of the columns
-awk '{for(i=1; i<=NF; i++){sum[i]+=$i}} END \  
+awk '{for(i=1; i<=NF; i++){sum[i]+=$i}} END \
 {for(i=1; i<=NF; i++){printf "%d %f\n", i, sum[i]/NR}}' $tmp/clean.dat > $tmp/Tmean.dat
 
 # convert line number to length
