@@ -1,13 +1,14 @@
 name: inmod-md
 channels:
-        - conda-forge
+ - conda-forge
 dependencies:
-        - gromacs=2025.4=nompi*
-        - matplotlib
-        - ipykernel
-        - notebook=6.5.5
-        - nglview
-        - numpy
-        - pandas
-        - scikit-image
-        - circle-fit
+ - gromacs=2025.4=nompi*
+ - matplotlib
+ - ipykernel
+ - notebook=6.5.5
+ - nglview
+ - pytraj
+ - numpy
+ - pandas
+ - scikit-image
+ - circle-fit
