@@ -2,11 +2,11 @@
 % This routine prints to screen what is required in the *.mdp file for the 
 % non-equilibrium simulation. 
 % "Number of groups" is the total number of groups of the system
-% "Number of Nosè-Hoover groups" is the number of groups at the end of the
-% tube attached to Nosè-Hoover (NH) thermostats
+% "Number of Nose-Hoover groups" is the number of groups at the end of the
+% tube attached to Nose-Hoover (NH) thermostats
 % "Initial temperature" is the temperature to impose at one end
 % "Final temperature" is the temperature to impose at the other end
-% "Nosè-Hoover time" is the relaxation time to impose for the NH
+% "Nose-Hoover time" is the relaxation time to impose for the NH
 % thermostats
 %
 % After running, copy-paste what is printed on the MATLAB command windows 
@@ -18,10 +18,10 @@ clear all
 clc
 
 GN  = input('Number of groups [integer]: ');
-NN  = input('Number of Nosè-Hoover groups [integer]: ');
+NN  = input('Number of Nosï¿½-Hoover groups [integer]: ');
 TI  = input('Initial temperature [integer]: ');
 TF  = input('Final temperature [integer]: ');
-tau = input('Nosè-Hoover time [real]: ');
+tau = input('Nosï¿½-Hoover time [real]: ');
 
 N = 1;
 output = '';

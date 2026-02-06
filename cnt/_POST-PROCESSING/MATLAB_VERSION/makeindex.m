@@ -4,7 +4,7 @@ clc
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This routine prints to screen the content of the *.ndx file to be used in the
-% Nosé-Hoover md simulation. "Initial value" is the label (integer) of the first 
+% Nose-Hoover md simulation. "Initial value" is the label (integer) of the first 
 % group. "Interval" is the number of atoms in each group. "Number of groups" 
 % is the total number of groups to be created. 
 %
