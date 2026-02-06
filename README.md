@@ -6,6 +6,7 @@
 - [How to create and test the virtual environment](#how-to-create-and-test-the-virtual-environment)
 - [How to run exercise notebooks](#how-to-run-exercise-notebooks)
 - [How to visualize the results](#how-to-visualize-the-results)
+- [Additional suggested software](#additional-suggested-software)
 - [License](#license)
 
 ## Simulated systems
@@ -98,6 +99,12 @@ In the notebooks, you will find `nglview` widgets allowing inline visualization 
 - PyMOL: https://www.pymol.org/ - an activation key must be purchased.
 
 In terms of "Gromacs friendliness", **VMD** is definitely the best. I really suggest you install VMD :film_projector:
+
+## Additional suggested software
+
+- **VMD** - see the previous section;
+- **Grace** - a very lightweight plotting software, which is very Gromacs-friendly (https://plasma-gate.weizmann.ac.il/Grace/);
+- **MATLAB** - the postprocessing scripts for the `cnt` and the `zeolite` are also provided in MATLAB format. 
 
 ## License
 
