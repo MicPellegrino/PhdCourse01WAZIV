@@ -13,7 +13,7 @@
 
 ### Heat transfer in a carbon nanotube (`cnt`)
 
-This first exercise will introduce you to the basics of Molecular Dynamics (creating configuration files, algorithms, force fields, topologies thermalization and post-processing). The final goal will be to evaluate the thermal conductivity of a carbon nanotube using a non-equilibrium method. Zero to hero.
+This first exercise will introduce you to the basics of Molecular Dynamics (creating configuration files, algorithms, force fields, topologies, thermalization and post-processing). The final goal will be to evaluate the thermal conductivity of a carbon nanotube using a non-equilibrium method. Zero to hero.
 
 ### Water adsorption in zeolite (`zeolite`)
 
@@ -25,7 +25,7 @@ The third exercise moves toward multicomponent liquid systems and introduces pre
 
 ### Wetting of flat and rough surfaces (`wetting`)
 
-In the fourth exercise, you will simulate a water droplet spreading on an “aluminum” crystal. You will compute its contact angle and study how it changes as the strenght of liquid–solid interactions is increased. Finally, you will explore how wetting states are affected by the presence of surface nanostructures.
+In the fourth exercise, you will simulate a water droplet spreading on an “aluminum” crystal. You will compute its contact angle and study how it changes as the strength of liquid–solid interactions is increased. Finally, you will explore how wetting states are affected by the presence of surface nanostructures.
 
 ## How to create and test the virtual environment
 
@@ -33,7 +33,7 @@ In the fourth exercise, you will simulate a water droplet spreading on an “alu
 
 - If you are a **Linux** user, then you are already good to go;
 - If you are a **Windows** user, setup the Windows Subsystem for Linux: https://learn.microsoft.com/en-us/windows/wsl/install (recommended), or use a virtual machine (discouraged).
-- If you are a **Mac** user, the environment and the notebooks have been also tested on the latest MacOS with m2 and m4 architecture. So you should also be good to go.
+- If you are a **Mac** user, the environment and the notebooks have also been tested on the latest MacOS with m2 and m4 architecture. So you should also be good to go.
 
 **Step :one: - Download and install Conda or one of its variants**:
 - Conda: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html;
@@ -55,16 +55,18 @@ I will refer to Conda from now on, but mind that any variant should work just fi
 
 	conda env create -f environment.yml
 
-it may be necessary to add a `--channel-priority strict` flag to force `conda` to install the required version of Jupyter Notebook. 
+It may be necessary to add a `--channel-priority strict` flag to force `conda` to install the required version of Jupyter Notebook. 
 
 	conda env create -f environment.yml --channel-priority strict
 
-If it gives you an error, try this instead:
+If it throws an error, try this instead:
 
 	conda config --set channel_priority strict
 	conda env create -f environment.yml
 
-**Step :three: - Test GROMACS installation**. Activate the virtual environment by running:
+:warning: Since this repository will be modified concurrently with the course, always run `git pull` before you start working on the exercises and check if `environment.yml` has changed!
+
+**Step :three: - Test GROMACS installation**. Activate the virtual environment by first running:
 
 	conda activate inmod-md
 
@@ -95,8 +97,8 @@ Alternatively, you can open the file from `bash` (i.e. _outside the notebook_) u
 In the notebooks, you will find `nglview` widgets allowing inline visualization of molecular simulation results. There are other (possibly better) solutions _outside the notebook_:
 - VMD: https://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD - free of charge, you just need to register your institutional email;
 - OVITO: https://www.ovito.org/manual/installation.html - there's a free limited version and a full commercial version (the free version is more than enough for visualization purposes, plus you can use the complete Python API without having to pay);
-- VEGA ZZ: https://www.ddl.unimi.it/cms/index.php?Software_projects:VEGA_ZZ:Download - an activation key must be purchased;
-- PyMOL: https://www.pymol.org/ - an activation key must be purchased.
+- VEGA ZZ: https://www.ddl.unimi.it/cms/index.php?Software_projects:VEGA_ZZ:Download - requires registration and activation key;
+- PyMOL: https://www.pymol.org/ - requires registration and activation key.
 
 In terms of "GROMACS friendliness", **VMD** is definitely the best. I really suggest you install VMD.
 
