@@ -55,14 +55,14 @@ I will refer to Conda from now on, but mind that any variant should work just fi
 
 	conda env create -f environment.yml
 
-It may be necessary to add a `--channel-priority strict` flag to force `conda` to install the required version of Jupyter Notebook. 
-
-	conda env create -f environment.yml --channel-priority strict
-
-If it throws an error, try this instead:
+It may be necessary to set `channel-priority strict` to force `conda` to install the required version of Jupyter Notebook:
 
 	conda config --set channel_priority strict
 	conda env create -f environment.yml
+
+If you use `mamba` instead:
+
+	mamba env create -f environment.yml --channel-priority strict
 
 :warning: Since this repository will be modified concurrently with the course, always run `git pull` before you start working on the exercises and check if `environment.yml` has changed!
 
