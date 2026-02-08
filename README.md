@@ -7,7 +7,7 @@
 - [How to run exercise notebooks](#how-to-run-exercise-notebooks)
 - [How to visualize the results](#how-to-visualize-the-results)
 - [Additional suggested software](#additional-suggested-software)
-- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 ## Simulated systems
 
@@ -64,7 +64,7 @@ If it gives you an error, try this instead:
 	conda config --set channel_priority strict
 	conda env create -f environment.yml
 
-**Step :three: - Test Gromacs installation**. Activate the virtual environment by running:
+**Step :three: - Test GROMACS installation**. Activate the virtual environment by running:
 
 	conda activate inmod-md
 
@@ -86,7 +86,7 @@ You can now run the notebook cell-by-cell. You may have to edit some simulation 
 
 	jupyter-notebook
 
-and navigate to the file you want to edit. Sorry ladies and gentlemen, the notebook itself is the best, and only, GUI you’re going to get. :man_shrugging:
+and navigate to the file you want to edit. Sorry ladies and gentlemen, the notebook itself is the best, and only, GUI you’re going to get!
 
 Alternatively, you can open the file from `bash` (i.e. _outside the notebook_) using your favourite text editor, like `vim`, `code`, `emacs`, `gedit` or `featherpad`. They are all equal, but `vim` is more equal than the others.
 
@@ -98,15 +98,15 @@ In the notebooks, you will find `nglview` widgets allowing inline visualization 
 - VEGA ZZ: https://www.ddl.unimi.it/cms/index.php?Software_projects:VEGA_ZZ:Download - an activation key must be purchased;
 - PyMOL: https://www.pymol.org/ - an activation key must be purchased.
 
-In terms of "Gromacs friendliness", **VMD** is definitely the best. I really suggest you install VMD :film_projector:
+In terms of "GROMACS friendliness", **VMD** is definitely the best. I really suggest you install VMD.
 
 ## Additional suggested software
 
-- **VMD** - see the previous section;
-- **Grace** - a very lightweight plotting software, which is very Gromacs-friendly (https://plasma-gate.weizmann.ac.il/Grace/);
-- **MATLAB** - the postprocessing scripts for the `cnt` and the `zeolite` are also provided in MATLAB format. 
+- **VMD** :film_projector: - see the previous section;
+- **Grace** :bar_chart: - a very lightweight plotting software, very GROMACS-friendly (https://plasma-gate.weizmann.ac.il/Grace/);
+- **MATLAB** :computer:- the postprocessing scripts for the `cnt` and the `zeolite` are also provided in MATLAB format. 
 
-## License
+## Acknowledgements
 
 Provided by the Multi-Scale Modeling Lab of Politecnico di Torino (Italy). These resources are intended for pedagogical purposes, and were designed for the undergraduate and third-cycle courses at Politecnico di Torino (2023-2026).
 
@@ -114,13 +114,3 @@ Authors:
 - Matteo Fasano (matteo.fasano@polito.it)
 - Michele Pellegrino (michele.pellegrino@polito.it)
 
-
-
-
-#### TODO (in order of importance)
-- Port all MATLAB and bash scripts to Python;
-- Add more instructions on Conda setup;
-- Finish commenting wetting notebook;
-- Test xmgrace (and gnuplot? on a local wsl;
-- Add figures notebooks (NB not embedded!);
-- Add an actual license.
