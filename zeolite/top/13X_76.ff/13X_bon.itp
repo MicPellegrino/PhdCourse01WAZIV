@@ -1,0 +1,37 @@
+; This file is used to determine the parameters of the bond interactions.
+; All the following data are taken from MacKerel et al. JPCB v.110 p.2782 (2006), suppl. data, except b0 and th0 that are taken from the geometry.
+; Pay attention to the conversion of the unit of measure.
+; In this case we don't need any constrain definition.
+; 
+; Possible fields are: 1) bondtypes, 2) angletypes, 3) dihedraltypes, 4) constrainttypes
+
+[ bondtypes ]
+; page 125 GROMACS manual table 5.5
+; interaction type: harmonic
+; [b0] = nm, [kb] = kJ/mol/nm^2
+; i    j               func         b0          kb
+; 
+opls_116  opls_117       1      0.09572     502080.0
+; tip4p
+opls_113  opls_114	 1	 0.09572     502416.0 
+
+[ angletypes ]
+; page 125 GROMACS manual table 5.5
+; interaction type: harmonic
+; [th0] = deg, [kth] = kJ/mol/rad^2
+; i     j    k	      		      func     th0	       kth
+;
+opls_117  opls_116  opls_117           1      109.500        627.600
+
+; tip4p
+opls_114  opls_113  opls_114	       1      104.520	     628.020	
+
+
+
+
+[ dihedraltypes ]
+; page 125 GROMACS manual table 5.5
+; interaction type: proper dihedral
+; [phi] = deg, [k] = kJ/mol, [n] = -
+;  i  j     k    l         func     	  phi        k       n
+

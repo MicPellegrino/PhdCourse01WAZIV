@@ -1,0 +1,10 @@
+Potential
+Kinetic-En.
+Total-Energy
+Coul.-recip.
+Coul-SR:Zeo_fmw-Water
+LJ-SR:Zeo_fmw-Water 
+Coul-SR:Water-NA_cat
+LJ-SR:Water-NA_cat
+Coul-SR:Water-Water
+LJ-SR:Water-Water

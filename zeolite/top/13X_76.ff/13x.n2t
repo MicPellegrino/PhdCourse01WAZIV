@@ -1,0 +1,38 @@
+; This file is used to translate name in topology. It reads the name of an atom in your structure and, based on its connectivity(i.e., the number of bonds, the bond lengths and the atoms bonded), tries to guess the proper atom type among those defining in the .n2t file.
+;
+; real-atom-name  fictitious-name  charge  mass  #bonds  bonded-atom  distance  
+;
+
+
+; Water molecule
+
+OW   opls_116     -0.8476	15.9994   2    HW1  0.100334440746934     HW2  0.100334440746934 
+HW1  opls_117      0.4238	1.00800   1    OW   0.100334440746934        
+HW2  opls_117      0.4238	1.00800   1    OW   0.100334440746934
+
+
+; Bulk crystal 
+real-atom-name  fictitious-name  charge  mass  #bonds  bonded-atom  distance  
+
+O 			O_Si_r  -0.83875 15.9994	2	SI   0.170	SI   0.170
+O 			O_Si_r  -0.83875 15.9994	2	SI   0.170	SI   0.161
+O 			O_Si	-0.83875 15.9994	2	SI   0.161	SI   0.161
+O			O_Al	-0.83875 15.9994	2	SI   0.161	AL   0.170
+O			O_Al_r	-0.83875 15.9994	2	SI   0.170	AL   0.170
+SI			SIb	1.2817	 28.0860	4  	O    0.161	O    0.161	O    0.161	O    0.161
+SI			SIbr	1.2817	 28.0860	4  	O    0.170	O    0.170	O    0.170	O    0.170
+AL			ALb	1.2817	 26.9815	4	O    0.170	O    0.170	O    0.170	O    0.170
+
+O			SiOH	-0.83875	15.9994	2	Si   0.161	H    0.096
+O			SiALH	-0.83875	15.9994	2	AL   0.170	H    0.096
+H			Hb	 0.45	1	1	O    0.096
+
+; Extra framework cation
+
+NA			NAb	1.0000	22.9897	0
+
+
+
+
+
+

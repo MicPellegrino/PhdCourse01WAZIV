@@ -1,0 +1,103 @@
+; ***********************************************************************************************
+; MD of the dry crystal
+; ***********************************************************************************************
+
+
+; 1) GENERAL
+; Description and structure of .mdp files are taken from GROMACS manual, chapter 7.3.*   
+
+define                  = -DPOSRES 
+
+; 2) PRE-PROCESSING
+
+
+; 3) RUN CONTROL 
+integrator          =  md
+dt                  =  0.001 ; (0.001) [ps] default
+nsteps              =  10000 ; maximum number of steps to integrate or minimize, -1 is no maximum, (0 default)
+;comm-mode          =  Linear
+nstcomm             =  2000                    ; [steps] frequency of mass motion removal
+;comm_grps          =  O AL SI NA   ; group(s) for center of mass motion removal
+
+; 4) ENERGY MINIMIZATION 
+
+
+; 5) LANGEVIN DYNAMICS
+; ld_seed             = 1993   ; (1993) [integer] default. It initialize random generator for thermal noise (v-rescale)
+
+
+; 6) SHELL MOLECUCULAR DYNAMICS
+
+
+; 7) TEST PARTICLE INSERTION
+
+
+; 8) OUTPUT CONTROL
+nstxout                 = 25000         ; [steps] freq to write coordinates to trajectory
+nstvout                 = 25000         ; [steps] freq to write velocities to trajectory
+nstfout                 = 25000         ; [steps] freq to write forces to trajectory
+nstlog                  =               ; [steps] freq to write energies to log file
+nstenergy               = 2000          ; [steps] freq to write energies to energy file
+nstcalcenergy           = 2000          ; [steps] freq to calculate energies
+nstxout-compressed      = 5000          ; [steps] freq to write coordinates to xtc trajectory
+xtc_precision           =               ; [real] precision to write xtc trajectory
+compressed-x-grps       = System        ; group(s) to write to xtc trajectory
+
+
+; 9) NEIGHBOR SEARCHING
+cutoff-scheme       =  verlet
+nstlist             =  10    ; frequency to update the neighbor list, (10) default
+pbc 		        =  xyz
+periodic_molecules  =  yes
+rlist               =  1     ; cut-off distance for the short-range neighbor list, (1) [nm] default
+
+
+; 10) ELECTROSTATICS
+coulombtype         =  PME   ; PME needs the definition of fourierspacing and pme_order
+pme_order           =  4
+rcoulomb            =  1     ; (1) [nm] default value
+
+
+; 11) VdW
+vdwtype             =  Cut-off
+rvdw                =  1     ; distance for the LJ or Buckingham cut-off (1) [nm] default value
+
+
+; 12) TABLES
+
+
+; 13) EWALD
+fourierspacing      =  0.12  ; (0.12) [nm] default
+fourier_nx          =  0     ; (0) default
+fourier_ny          =  0     ; (0) default
+fourier_nz          =  0     ; (0) default
+ewald_rtol          =  1e-5  ; (1e-5) default
+
+
+; 14) TEMPERATURE COUPLING
+Tcoupl              =  v-rescale
+tc-grps             =  Zeo_fmw NA_cat Water;
+tau_t               =  0.200 0.200 0.200 ; [ps]
+ref_t               =  300  300 300; [K]
+
+
+; 15) PRESSURE COUPLING   
+Pcoupl              =  no
+Pcoupltype          =  isotropic
+tau_p               =  3      ; (1) [ps] default 
+compressibility     =  4.5e-5 ; [bar-1]
+ref_p               =  1.0    ; [bar]
+refcoord_scaling    =  com;
+
+; 16) SIMULATED ANNEALING
+
+
+; 17) VELOCITY GENERATION
+gen-vel                  = yes
+gen-temp                 = 300
+gen-seed                 = 173529
+
+
+; 18) BONDS
+constraints         =  none
+

@@ -1,0 +1,27 @@
+; FF parameters for the zeolite matrix (no Na atoms)
+#include "zeolite.itp"
+
+; Refrence coordinated for position restraints
+#ifdef POSRES
+#include "posre_Zeo.itp"
+#endif
+
+; Definition of Na cations
+[ moleculetype ]
+; Name            nrexcl
+NA_EXTRA              1
+[ atoms ]
+; nr       type  resnr residue  atom   cgnr    charge                mass       typeB    chargeB      massB
+  1        NAb   1     UNK      NA     1       0.9999157763157895    22.9800    ; No need for type B definition 
+
+; Include SPC/E water topology
+#include "oplsaa.ff/tip4p.itp"
+
+[ system ]
+; Name
+13X76_2x2x2
+
+[ molecules ]
+; Compound    	n.mols
+13X76_2x2x2   	1
+NA_EXTRA 	608

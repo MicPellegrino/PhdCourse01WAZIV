@@ -1,0 +1,111 @@
+; ***********************************************************************************************
+; EM of the dry crystal
+; ***********************************************************************************************
+
+
+; 1) GENERAL
+; Description and structure of .mdp files are taken from GROMACS manual, chapter 7.3.*   
+
+
+; 2) PRE-PROCESSING
+
+define              = -DPOSRES      ;
+
+; 3) RUN CONTROL 
+integrator          =  steep
+nsteps              =  -1; maximum number of steps to integrate or minimize, -1 is no maximum, (0 default)
+energygrps          =  O AL SI NA
+
+; 4) ENERGY MINIMIZATION (steep)
+emtol               =  10.0 ; (10.0) [kJ mol−1 nm−1 ] default
+emstep              =  0.005  ; (0.01) [nm] default
+
+
+; 5) LANGEVIN DYNAMICS
+
+
+; 6) SHELL MOLECUCULAR DYNAMICS
+
+
+; 7) TEST PARTICLE INSERTION
+
+
+; 8) OUTPUT CONTROL
+
+
+; 9) NEIGHBOR SEARCHING
+cutoff-scheme       =  verlet
+nstlist             =  10    ; frequency to update the neighbor list, (10) default
+pbc 		        =  xyz
+periodic_molecules  =  yes
+rlist               =  1     ; cut-off distance for the short-range neighbor list, (1) [nm] default
+
+
+; 10) ELECTROSTATICS
+coulombtype         =  PME   ; PME needs the definition of fourierspacing and pme_order
+pme_order           =  4
+rcoulomb            =  1     ; (1) [nm] default value
+
+
+; 11) VdW
+vdwtype             =  Cut-off
+rvdw                =  1     ; distance for the LJ or Buckingham cut-off (1) [nm] default value
+
+
+; 12) TABLES
+
+
+; 13) EWALD
+fourierspacing      =  0.12  ; (0.12) [nm] default
+fourier_nx          =  0     ; (0) default
+fourier_ny          =  0     ; (0) default
+fourier_nz          =  0     ; (0) default
+ewald_rtol          =  1e-5  ; (1e-5) default
+
+
+; 14) TEMPERATURE COUPLING
+
+
+; 15) PRESSURE COUPLING
+
+
+; 16) SIMULATED ANNEALING
+
+
+; 17) VELOCITY GENERATION
+
+
+; 18) BONDS
+constraints         =  none
+
+
+; 19) ENERGY GROUP EXCLUSIONS
+
+
+; 20) WALLS
+
+
+; 21) COM PULLING
+
+
+; 22) NMR REFINEMENT
+
+
+; 23) FREE ENERGY CALCULATIONS
+
+
+; 24) NON-EQUILIBRIUM MD
+
+
+; 25) ELECTRIC FIELDS
+
+
+; 26) QM/MM
+
+
+; 27) IMPLICIT SOLVENT
+
+
+; 28) USER DEFINED THINGIES
+
+
