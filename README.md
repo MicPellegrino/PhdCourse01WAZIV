@@ -64,7 +64,9 @@ If you use `mamba` instead:
 
 	mamba env create -f environment.yml --channel-priority strict
 
-:warning: Since this repository will be modified concurrently with the course, always run `git pull` before you start working on the exercises and check if `environment.yml` has changed!
+:warning: Since this repository could be modified concurrently with the course, always run `git pull` before you start working on the exercises and check if `environment.yml` has changed! In case, update the virtual environment.
+
+:warning: If your CUDA backend version is relatively new, the process of creating the environment may take some time (1-5min). Do not despair, just wait.
 
 **Step :three: - Test GROMACS installation**. Activate the virtual environment by first running:
 
@@ -76,7 +78,7 @@ and then run:
  
 from the command line. The first line should be: `:-) GROMACS - gmx help, 2025.4-conda_forge (-:`.
 
-:warning: If the command `gmx` is not found or you get something else other than `2025.4-conda_forge`, it means that either the Conda environment is not active or that the Gromacs dependency has not been installed.
+:warning: If the command `gmx` is not found or you get something else other than `2025.4-conda_forge`, it means that either the Conda environment is not active or that the GROMACS dependency has not been installed.
 
 ## How to run exercise notebooks
 
@@ -106,7 +108,7 @@ In terms of "GROMACS friendliness", **VMD** is definitely the best. I really sug
 
 - **VMD** :film_projector: - see the previous section;
 - **Grace** :bar_chart: - a very lightweight plotting software, very GROMACS-friendly (https://plasma-gate.weizmann.ac.il/Grace/);
-- **MATLAB** :computer:- the postprocessing scripts for the `cnt` and the `zeolite` are also provided in MATLAB format. 
+- **MATLAB** :computer: - the postprocessing scripts for the `cnt` and the `zeolite` are also provided in MATLAB format. 
 
 ## Acknowledgements
 
