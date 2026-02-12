@@ -2,9 +2,20 @@ import numpy as np
 from skimage.measure import find_contours
 import circle_fit as cf
 
-# TODO: Add comments!
-
 def circle_fit_droplet(intf_contour, z_sub) :
+
+    """
+        Perform a least-square fit of a circle, given the contour of a droplet
+        Input
+            intf_contour : 2d numpy array containing (x,z) coordinates of contour points
+            z_sub : z-coordinate of the solid surface [nm]
+        Output
+            xc : x-coordinate of the centre [nm]
+            zc : z-coordinate of the centre [nm]
+            R : radius of the circle [nm]
+            residue : L2 error
+    """
+
     M = len(intf_contour[0,:])
     data_circle_x = []
     data_circle_z = []
@@ -17,6 +28,19 @@ def circle_fit_droplet(intf_contour, z_sub) :
     return cf.least_squares_circle(np.stack((data_circle_x, data_circle_z), axis=1))
 
 def detect_contour (density_array, density_target, hx, hz) :
+
+    """
+        Uses find_contours() from skimage.measure to determine the contour of a droplet
+        from its density map
+        Input
+            density_array : 2d numpy array containing density values
+            density_target : isoline density target
+            hx : horizontal bin size [nm]
+            hz : vertical bon size [nm]
+        Output
+            contour : 2d numpy array containing (x,z) coordinates of contour points
+    """
+
     contour = find_contours(density_array, density_target, fully_connected='high')
     if len(contour)>1 :
         contour = sorted(contour, key=lambda x : len(x))
@@ -26,10 +50,40 @@ def detect_contour (density_array, density_target, hx, hz) :
     return contour
 
 def read_density(dat_file_name) :
+
+    """
+        Reads the density field from a .dat binary file
+        Input
+            dat_file_name : binary .dat file generate by gmx densmap
+        Output
+            density : 2d numpy array containing density values
+    """
+
     density = np.loadtxt(dat_file_name)
     return density
 
 def contact_angle(density, Lx, Lz, dens_thresh, z_sub) :
+
+    """
+        Encapsulates combines detect_contour() and circle_fit_droplet(),
+        prints the equilibrium contact angle
+        Input
+            density : 2d numpy array containing density values
+            Lx : length of the simulation box [nm]
+            Lz : height of the simulation box [nm]
+            dens_thresh : isoline density target
+            z_sub : z-coordinate of the solid surface [nm]
+        Output
+            xc : x-coordinate of the centre [nm]
+            zc : z-coordinate of the centre [nm]
+            R : radius of the circle [nm] 
+            x : x-subdivision of the meshgrid (for plotting)
+            z : y-subdivision of the meshgrid (for plotting)
+            X : x-points of the meshgrid (for plotting)
+            Z : z-points of the meshgrid (for plotting)
+            intf_contour : 2d numpy array containing (x,z) coordinates of contour points
+    """
+
     Nx = density.shape[0]
     Nz = density.shape[1]
     hx = Lx/Nx
